@@ -14,4 +14,5 @@ COPY ./src .
 CMD [ "node", "app.js" ]
 
 #docker run command in order to launch container with this image
-#docker run -it --name notes -v ${PWD}/volume:/usr/src/app/data dffiant/notes-app /bin/sh
+#docker run -it --name notes -v ${PWD}/data:/usr/src/app/data dffiant/notes-app /bin/sh  <-PowerShell
+#docker run -it --name notes -v %cd%/data:/usr/src/app/data dffiant/notes-app /bin/sh  <-cmd
